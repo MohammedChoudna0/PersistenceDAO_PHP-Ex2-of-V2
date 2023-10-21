@@ -1,7 +1,8 @@
 <?php 
 
 $dir = __DIR__;
-require_once $dir . '/../utils/SessionHelper.php';?>
+require_once './persistence/conf/PersistentManager.php';
+;?>
 
 <head>
     <meta charset="UTF-8">

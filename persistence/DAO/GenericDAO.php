@@ -13,6 +13,5 @@ abstract class GenericDAO {
 
   // métodos abstractos para CRUD de clases que hereden
   abstract protected function selectAll();
-  abstract protected function delete($id);
 
 }

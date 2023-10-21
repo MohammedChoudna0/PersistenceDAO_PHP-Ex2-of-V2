@@ -4,13 +4,6 @@
     class PartidoDAO extends GenericDAO {
     const MATCHES_TABLE = 'partidos';
 
-    public function insert($equipo1_id, $equipo2_id, $resultado) {
-        $query = "INSERT INTO " . self::MATCHES_TABLE . " (equipo1_id, equipo2_id, resultado) VALUES (?, ?, ?)";
-        $stmt = mysqli_prepare($this->conn, $query);
-        mysqli_stmt_bind_param($stmt, 'iis',  $equipo1_id, $equipo2_id, $resultado);
-        return $stmt->execute();
-        
-    }
 
     public function selectAll() {
         $query = "SELECT * FROM " . self::MATCHES_TABLE;
@@ -30,12 +23,6 @@
         return $partidos;
     }
 
-    public function delete($id) {
-        $query = "DELETE FROM " . self::MATCHES_TABLE . " WHERE id = ?";
-        $stmt = mysqli_prepare($this->conn, $query);
-        mysqli_stmt_bind_param($stmt, 'i', $id);
-        return $stmt->execute();
-        }
 }
 
 
