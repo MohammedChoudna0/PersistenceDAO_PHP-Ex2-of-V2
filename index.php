@@ -72,8 +72,8 @@ require_once './persistence/DAO/EquipoDAO.php'?>
                     <?php foreach ($resultados as $resultado): ?>
                         <tr>
                             <td><?php echo $resultado['id']; ?></td>
-                            <td><?php echo $resultado['equipo1_id']; ?></td>
-                            <td><?php echo $resultado['equipo2_id']; ?></td>
+                            <td><?php echo $resultado['equipo1_nombre']; ?></td>
+                            <td><?php echo $resultado['equipo2_nombre']; ?></td>
                             <td><?php echo $resultado['resultado']; ?></td>
                         </tr>
                     <?php endforeach; ?>
